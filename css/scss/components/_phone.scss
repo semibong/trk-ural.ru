@@ -1,0 +1,25 @@
+.phone {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    height: 5rem;
+    background: linear-gradient(128deg, #FF5B47 0%, #FF7B48 70%, #FFB339 100%);
+    box-sizing: border-box;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+
+    img {
+        width: 2.4rem;
+        height: 2.4rem;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #fff;
+    }
+}

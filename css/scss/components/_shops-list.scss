@@ -1,0 +1,111 @@
+body {
+    &:not(.light), &.dark {
+        .shops-list {
+            --color-shopslist-item-border: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &.light {
+        .shops-list {
+            --color-shopslist-item-border: rgba(255, 255, 255, 0.62);
+
+            &-shadow {
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.shops-list {
+    position: relative;
+    margin-bottom: 5rem;
+
+    @media #{$lg} {
+        margin-bottom: 4rem;
+    }
+
+    &-shadow {
+        position: absolute;
+        width: 10rem;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+        top: 0;
+
+        @media #{$lg} {
+            width: 2.8rem;
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity .2s linear;
+            top: 0;
+            left: 0;
+        }
+
+        &:first-of-type {
+            left: 0;
+
+            &::before {
+                background: linear-gradient(90deg, $color-background-dark, transparent);
+            }
+
+            &::after {
+                background: linear-gradient(90deg, $color-background-light, transparent);
+                opacity: 0;
+            }
+        }
+
+        &:last-of-type {
+            right: 0;
+
+            &::before {
+                background: linear-gradient(-90deg, $color-background-dark, transparent);
+            }
+
+            &::after {
+                background: linear-gradient(-90deg, $color-background-light, transparent);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__slider {
+        padding: 3.6rem 0;
+
+        .swiper-slide {
+            width: auto !important;
+        }
+    }
+
+    &__item {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--color-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 12rem;
+        width: max-content;
+        height: 7.2rem;
+        background: linear-gradient(0deg, rgba(#fff, 0.1), rgba(#fff, 0.15));
+        box-sizing: border-box;
+        box-shadow: 0 0.4rem 4.4rem 0 rgba(#000, 0.05);
+        padding: 0 1.8rem;
+        border: var(--color-shopslist-item-border) 1px solid;
+        border-radius: 2.2rem;
+        transition: all .2s linear;
+
+        &:hover {
+            color: $color-active;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+body {
+    &:not(.light), &.dark {
+        .bg-light {
+            opacity: 1;
+        }
+    }
+
+    &.light {
+        .bg-light {
+            opacity: 0;
+        }
+    }
+}
+
+.bg-light {
+    position: absolute;
+    width: 47.7rem;
+    height: 47.7rem;
+    background-color: #1D2945;
+    border-radius: 50%;
+    filter: blur(125px);
+    pointer-events: none;
+    z-index: -1;
+    transition: all .2s linear;
+
+    @media #{$lg} {
+        display: none;
+    }
+}

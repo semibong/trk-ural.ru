@@ -1,0 +1,213 @@
+.footer {
+    background: linear-gradient(0deg, #131B2C, #0F1522);
+    padding: 4.5rem 0 2.5rem;
+
+    @media #{$lg} {
+        padding: 2rem 0 2.5rem;
+    }
+
+    &__wrapper {
+        @media #{$lg} {
+            width: calc(100% - 5.6rem);
+            margin: 0 2.8rem;
+        }
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+        padding-bottom: 2.5rem;
+        border-bottom: rgba(#fff, 0.08) 1px solid;
+
+        @media #{$lg} {
+            padding-bottom: 2rem;
+        }
+
+        @media #{$sm} {
+            flex-direction: column;
+            align-items: start;
+            gap: 0.8rem;
+        }
+
+        p, a {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: rgba(#fff, 0.76);
+
+            @media #{$lg} {
+                font-size: 1.4rem;
+            }
+        }
+
+        p {
+            &:first-of-type {
+                @media #{$lg} {
+                    color: #FFD38A;
+                }
+            }
+        }
+
+        a {
+            @media #{$lg} {
+                display: none;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0 2.5rem;
+
+        @media #{$lg} {
+            gap: 2.5rem;
+            padding: 1.8rem 0;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media #{$md} {
+            flex-direction: column-reverse;
+            justify-content: start;
+            align-items: start;
+            gap: 2.5rem;
+        }
+    }
+
+    &-logo {
+        display: flex;
+        width: 19.8rem;
+        height: 6.4rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    .socials {
+        margin-bottom: 0.5rem;
+
+        @media #{$lg} {
+            margin-bottom: 0;
+        }
+    }
+
+    &__menus {
+        display: flex;
+        gap: 14.5rem;
+
+        @media #{$lg} {
+            flex-wrap: wrap;
+            gap: 2.8rem;
+        }
+
+        .menu:last-of-type {
+            margin-left: auto;
+
+            @media #{$md} {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            p {
+                margin-bottom: 2.4rem;
+
+                @media #{$lg} {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            ul {
+                gap: 1.8rem;
+
+                @media #{$lg} {
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+
+    .menu {
+        p {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #FFD38A;
+            margin-bottom: 1.7rem;
+
+            @media #{$lg} {
+                margin-bottom: 1rem;
+            }
+        }
+
+        ul {
+            flex-direction: column;
+            gap: 1.1rem;
+
+            @media #{$lg} {
+                gap: 1rem;
+            }
+
+            li a {
+                color: rgba(#fff, 0.78);
+                padding: 0;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+        gap: 7rem;
+        padding-top: 2.5rem;
+        border-top: rgba(#fff, 0.08) 1px solid;
+
+        @media #{$lg} {
+            padding-top: 2rem;
+        }
+
+        @media #{$sm} {
+            flex-direction: column;
+            align-items: start;
+            gap: 0.8rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: rgba(#fff, 0.62);
+
+            @media #{$lg} {
+                color: rgba(#fff, 0.3)
+            }
+        }
+
+        a {
+            font-size: 1.6rem;
+            color: rgba(#fff, 0.78);
+
+            @media #{$lg} {
+                color: rgba(#fff, 0.3);
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

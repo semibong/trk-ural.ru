@@ -1,0 +1,277 @@
+body {
+    &:not(.light), &.dark {
+        .introduction {
+            --color-quick-item-border: rgba(255, 255, 255, 0.38);
+            --color-quick-item-text: #C2CADA;
+            --color-quick-item-bg: rgba(255, 255, 255, 0.13);
+        }
+    }
+
+    &.light {
+        .introduction {
+            --color-quick-item-border: #D0D1D3;
+            --color-quick-item-text: #56657D;
+            --color-quick-item-bg: rgba(208, 209, 211, 0.3);
+        }
+    }
+}
+
+.hero + .container>.introduction {
+    margin-top: -7.5rem;
+
+    @media #{$lg} {
+        margin-top: -0.8rem;
+    }
+}
+
+.introduction {
+    position: relative;
+    margin-bottom: 8rem;
+    z-index: 1;
+
+    @media #{$lg} {
+        margin-bottom: 4rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+
+        @media #{$lg} {
+            gap: 3rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 1.2rem;
+        height: 29.4rem;
+        z-index: 3;
+
+        @media #{$lg} {
+            flex-direction: column-reverse;
+            gap: 1.8rem;
+            height: auto;
+        }
+    }
+
+    &-stats {
+        flex-shrink: 0;
+        max-width: 78.4rem;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(124deg, rgba(#D52B1E, 0.7) 0%, rgba(#EF5B35, 0.7) 58%, rgba(#EEA21A, 0.7) 100%);
+        background-size: 101%;
+        background-position: center;
+        backdrop-filter: blur(40px);
+        box-sizing: border-box;
+        box-shadow: $block-shadow-second;
+        padding: 2rem 2rem 1.5rem 1.5rem;
+        border: rgba(#fff, 0.18) 1px solid;
+        border-radius: 3rem;
+
+        @media #{$lg} {
+            max-width: none;
+            padding: 2.2rem 1.4rem 2.4rem;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 2.5rem;
+            color: #fff;
+            padding-left: 1.8rem;
+            margin: 0 0 0.5rem;
+
+            @media #{$lg} {
+                padding-left: 1.2rem;
+                margin: 0 0 0.7rem;
+            }
+        }
+
+        &>p {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            color: #fff;
+            padding-left: 1.8rem;
+            margin-bottom: 2.7rem;
+
+            @media #{$lg} {
+                font-weight: 300;
+                line-height: 1.6rem;
+                padding: 0 1.2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__items {
+            display: flex;
+            gap: 1.1rem;
+            margin-bottom: 1.5rem;
+
+            @media #{$lg} {
+                flex-direction: column;
+                gap: 0.8rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__item {
+            width: calc(33.33% - 0.733rem);
+            box-sizing: border-box;
+            padding-left: 1.8rem;
+
+            @media #{$lg} {
+                width: 100%;
+                padding-left: 1.2rem;
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 2.2rem;
+                color: #fff;
+
+                @media #{$lg} {
+                    font-weight: 600;
+                }
+            }
+
+            span {
+                font-size: 1.3rem;
+                color: #fff;
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        gap: 1.1rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &__item {
+            width: calc(33.33% - 0.733rem);
+            background: linear-gradient(0deg, rgba(#fff, 0.08), rgba(#fff, 0.18));
+            box-sizing: border-box;
+            padding: 2.7rem 2rem 1.8rem;
+            border: rgba(#fff, 0.2) 1px solid;
+            border-radius: 2.4rem;
+
+            @media #{$lg} {
+                width: 100%;
+                padding: 1.2rem;
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 2.5rem;
+                color: #fff;
+                margin-bottom: 0.7rem;
+
+                @media #{$lg} {
+                    font-weight: 600;
+                    font-size: 2rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            span {
+                font-size: 1.4rem;
+                color: rgba(#fff, 0.74);
+            }
+        }
+    }
+
+    &-quick {
+        width: 100%;
+        height: 100%;
+        background: var(--color-block-background);
+        backdrop-filter: blur(11px);
+        box-sizing: border-box;
+        box-shadow: $block-shadow;
+        padding: 2.5rem 2.6rem 1.3rem;
+        border: var(--color-block-border) 1px solid;
+        border-radius: 3rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            padding: 1.4rem 1.4rem 2.2rem;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            color: var(--color-primary);
+            padding-left: 2rem;
+            margin: 0 0 2rem;
+            transition: all .2s linear;
+
+            @media #{$lg} {
+                font-size: 2.5rem;
+                line-height: 2.3rem;
+            }
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            
+            @media #{$lg} {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        &__item {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            width: calc(50% - 0.6rem);
+            min-height: 10rem;
+            background: linear-gradient(0deg, rgba(#fff, 0.06) 0, rgba(#fff, 0.13) 50%, var(--color-quick-item-bg) 100%);
+            background-size: 100% 200%;
+            background-position: bottom;
+            box-sizing: border-box;
+            padding: 1.6rem 1.8rem;
+            border: var(--color-quick-item-border) 1px solid;
+            border-radius: 2.4rem;
+            transition: all .2s linear;
+
+            @media #{$lg} {
+                width: 100%;
+                min-height: 7rem;
+                padding: 1rem 1rem 1.4rem 1.8rem;
+            }
+
+            &:hover {
+                background-position: top;
+                color: var(--color-primary);
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                color: var(--color-quick-item-text);
+                transition: all .2s linear;
+
+                @media #{$lg} {
+                    line-height: 1.4rem;
+                }
+            }
+        }
+    }
+
+    .shops-list {
+        margin-bottom: 0;
+    }
+}

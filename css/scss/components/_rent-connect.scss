@@ -1,0 +1,97 @@
+body {
+    &.light {
+        .rent-connect__content {
+            background: #F0F5F9;
+        }
+    }
+}
+
+.rent-connect {
+    position: relative;
+    margin-bottom: 8rem;
+
+    @media #{$lg} {
+        margin-bottom: 6rem;
+    }
+
+    .title-mini {
+        margin: 0;
+
+        @media #{$lg} {
+            padding-left: 0.5rem;
+        }
+    }
+
+    &__content {
+        background: var(--color-block-background);
+        backdrop-filter: blur(11px);
+        box-sizing: border-box;
+        box-shadow: $block-shadow;
+        padding: 3.4rem 3rem;
+        border: var(--color-block-border) 1px solid;
+        border-radius: 3.2rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            padding: 2.2rem 1.4rem 1.8rem;
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: end;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .title {
+            margin: 0 0 0.5rem;
+
+            @media #{$lg} {
+                font-size: 4rem;
+                line-height: 5rem;
+                padding-left: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    &-text {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: var(--color-text);
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 1.7rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn {
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+    }
+
+    .bg-light {
+        left: -24.4rem;
+        bottom: -18.7rem;
+    }
+}

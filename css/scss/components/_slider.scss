@@ -1,0 +1,36 @@
+body {
+    &:not(.light), &.dark {
+        .slider-progressbar {
+            --color-progressbar-bg: #303745;
+        }
+    }
+
+    &.light {
+        .slider-progressbar {
+            --color-progressbar-bg: #DAE4EE;
+        }
+    }
+}
+
+.slider {
+    &-progressbar {
+        width: 70rem !important;
+        height: 0.3rem !important;
+        background-color: var(--color-progressbar-bg);
+        border-radius: 10rem;
+        transition: background-color .2s linear;
+        transform: translateX(-50%);
+        top: auto !important;
+        left: 50% !important;
+        bottom: 0;
+
+        @media #{$lg} {
+            width: 100% !important;
+        }
+
+        span {
+            background-color: $color-active !important;
+            border-radius: 10rem;
+        }
+    }
+}
