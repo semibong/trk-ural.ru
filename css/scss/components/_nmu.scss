@@ -1,0 +1,37 @@
+.nmu {
+    position: relative;
+    margin-bottom: 8.5rem;
+
+    @media #{$lg} {
+        margin-bottom: 4rem;
+    }
+
+    &-subtitle {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 5rem;
+        text-wrap: balance;
+        color: #78859E;
+        margin-top: -4rem;
+        margin-bottom: 2.5rem;
+
+        @media #{$lg} {
+            line-height: 1.6rem;
+            margin-top: -2rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    .table {
+        margin-bottom: 3.2rem;
+
+        @media #{$lg} {
+            margin-bottom: 2.2rem;
+        }
+    }
+
+    .bg-light {
+        top: 21.4rem;
+        right: -27rem;
+    }
+}

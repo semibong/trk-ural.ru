@@ -1,0 +1,29 @@
+.rents {
+    margin-bottom: 7rem;
+
+    @media #{$lg} {
+        margin-bottom: 3.2rem;
+    }
+
+    &-subtitle {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        color: $color-active;
+        margin-bottom: 2.2rem;
+
+        @media #{$lg} {
+            font-size: 2rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    &-text {
+        color: var(--color-text-secondary);
+        transition: all .2s linear;
+
+        &, * {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+    }
+}

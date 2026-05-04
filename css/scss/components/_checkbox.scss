@@ -1,0 +1,53 @@
+.checkbox {
+    display: flex;
+    max-width: 55.4rem;
+
+    label {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 3.4rem;
+        cursor: pointer;
+
+        &, a {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: #4F596D;
+        }
+
+        a {
+            &:hover {
+                color: $color-active;
+            }
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 2.2rem;
+            height: 2.2rem;
+            transition: all .1s linear;
+            top: 0;
+            left: 0;
+        }
+
+        &::before {
+            background: url(../images/svg/checkbox.svg) no-repeat center / contain;
+        }
+
+        &::after {
+            background: url(../images/svg/checkbox-active.svg) no-repeat center / contain;
+            opacity: 0;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + label {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

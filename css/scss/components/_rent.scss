@@ -1,0 +1,274 @@
+body {
+    &:not(.light), &.dark {
+        .rent {
+            --color-rent-char-border: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    &.light {
+        .rent {
+            --color-rent-char-border: #D0D1D3;
+        }
+    }
+}
+
+.rent {
+    margin-bottom: 5rem;
+
+    @media #{$lg} {
+        margin-bottom: 4.5rem;
+    }
+
+    .btn-back {
+        margin-bottom: 2rem;
+
+        @media #{$lg} {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 4rem;
+        background-color: var(--color-block-background);
+        backdrop-filter: blur(11px);
+        box-sizing: border-box;
+        box-shadow: $block-shadow;
+        padding: 2rem 6.5rem 7.5rem 2rem;
+        border: var(--color-block-border) 1px solid;
+        border-radius: 3rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            flex-direction: column-reverse;
+            gap: 3rem;
+            padding: 2.2rem 2rem 6.5rem;
+        }
+    }
+
+    &__slider {
+        flex-shrink: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 58.4rem;
+        width: 100%;
+        padding-bottom: 2.3rem;
+
+        @media #{$lg} {
+            gap: 1rem;
+            max-width: none;
+            padding-bottom: 2.6rem;
+        }
+
+        .slider-progressbar {
+            width: calc(100% - 4rem) !important;
+
+            @media #{$lg} {
+                width: 100% !important;
+            }
+        }
+    }
+
+    &-slider {
+        width: 100%;
+        height: 48.6rem;
+        background-color: #fff;
+        border-radius: 2rem;
+
+        @media #{$lg} {
+            height: auto;
+            aspect-ratio: 307 / 255;
+        }
+
+        .swiper-slide {
+            opacity: 0 !important;
+
+            &-active {
+                opacity: 1 !important;
+            }
+        }
+
+        &__item {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            outline: none;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: inherit;
+            }
+        }
+    }
+
+    &-thumbs {
+        width: 100%;
+        height: 18.2rem;
+
+        @media #{$lg} {
+            height: auto;
+        }
+
+        .swiper-slide-thumb-active {
+            .rent-thumbs__item {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__item {
+            position: relative;
+            display: flex;
+            width: 18.2rem;
+            height: 18.2rem;
+            border-radius: 2rem;
+
+            @media #{$lg} {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                border: #E6320D 0.2rem solid;
+                border-radius: inherit;
+                opacity: 0;
+                transition: all .2s linear;
+                top: 0;
+                left: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                object-fit: cover;
+                object-position: center;
+                border-radius: inherit;
+                transition: all .2s linear;
+            }
+        }
+    }
+
+    &-info {
+        width: 100%;
+        padding-top: 1.3rem;
+
+        @media #{$lg} {
+            padding-top: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3rem;
+            color: var(--color-primary);
+            margin: 0 0 3rem;
+            transition: all .2s linear;
+
+            @media #{$lg} {
+                font-size: 2.5rem;
+            }
+
+            &:has(+ .rent-floor) {
+                margin: 0 0 0.3rem;
+            }
+
+            span {
+                color: $color-active;
+            }
+        }
+
+        .btn {
+            width: 36rem;
+
+            @media #{$lg} {
+                display: none;
+            }
+        }
+    }
+
+    &-floor {
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-bottom: 3rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            font-size: 2rem;
+        }
+
+        b {
+            color: $color-active;
+        }
+    }
+
+    &-char, &-description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        @media #{$lg} {
+            margin-bottom: 1rem;
+        }
+
+        span {
+            font-size: 1.4rem;
+            margin-bottom: 0.7rem;
+            color: var(--color-text);
+            transition: all .2s linear;
+            
+            @media #{$lg} {
+                margin-bottom: 0.3rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $color-active;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 5rem;
+            background-color: rgba(#0F1626, 0.02);
+            box-sizing: border-box;
+            padding: 0 1.8rem;
+            border: var(--color-rent-char-border) 1px solid;
+            border-radius: 1rem;
+            transition: all .2s linear;
+        }
+    }
+
+    &-description {
+        margin-bottom: 2.5rem;
+
+        @media #{$lg} {
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: var(--color-text);
+            height: auto;
+            padding: 1.2rem 3.2rem 3.2rem 1.8rem;
+
+            @media #{$lg} {
+                padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+            }
+        }
+    }
+}

@@ -1,4 +1,40 @@
 .news {
+    position: relative;
+    margin-bottom: 8rem;
+
+    @media #{$lg} {
+        margin-bottom: 6rem;
+    }
+
+    &-sort {
+        margin-bottom: 3.5rem;
+
+        .form {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .news-card {
+            width: calc(33.33% - 1.333rem);
+
+            @media #{$lg} {
+                max-width: none;
+                width: calc(50% - 1rem);
+                height: 45rem;
+            }
+
+            @media #{$md} {
+                width: 100%;
+            }
+        }
+    }
+
     &-card {
         position: relative;
         display: flex;
@@ -59,7 +95,7 @@
             padding: 2.2rem 0.5rem 6.5rem 2.2rem;
 
             @media #{$lg} {
-                padding: 1.1rem 0.5rem 3rem 1.4rem;
+                padding: 2.4rem 2.2rem 2.2rem 2.2rem;
             }
         }
 
@@ -81,6 +117,7 @@
                 font-size: 2rem;
                 line-height: 2rem;
                 min-height: 4rem;
+                margin: 0 0 1.5rem;
             }
         }
 
@@ -98,10 +135,10 @@
 
             @media #{$lg} {
                 font-size: 1.4rem;
-                line-height: 1.4rem;
+                line-height: 1.8rem;
                 -webkit-line-clamp: 5;
                 padding-right: 0.9rem;
-                margin-bottom: 1.2rem;
+                margin-bottom: 3.2rem;
             }
         }
 
@@ -109,7 +146,11 @@
             font-weight: 700;
             font-size: 1.4rem;
             color: var(--color-secondary);
-            margin-top: auto;
         }
+    }
+
+    .bg-light {
+        right: -15.7rem;
+        bottom: -3.2rem;
     }
 }

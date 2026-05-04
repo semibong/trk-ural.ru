@@ -14,7 +14,8 @@ body {
 
 .slider {
     &-progressbar {
-        width: 70rem !important;
+        position: absolute;
+        width: 100% !important;
         height: 0.3rem !important;
         background-color: var(--color-progressbar-bg);
         border-radius: 10rem;
@@ -23,12 +24,8 @@ body {
         top: auto !important;
         left: 50% !important;
         bottom: 0;
-
-        @media #{$lg} {
-            width: 100% !important;
-        }
-
-        span {
+        
+        span, div {
             background-color: $color-active !important;
             border-radius: 10rem;
         }

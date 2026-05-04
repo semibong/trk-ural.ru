@@ -1,0 +1,125 @@
+.new {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18.5rem;
+
+    @media #{$lg} {
+        margin-bottom: 4.8rem;
+    }
+
+    .btn-back {
+        order: -1;
+        margin-bottom: 5rem;
+
+        @media #{$lg} {
+            order: 0;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+
+        @media #{$md} {
+            width: 100%;
+        }
+    }
+
+    &-date {
+        font-weight: 700;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+        margin-bottom: 1.5rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 5rem;
+        color: var(--color-text-secondary);
+        margin: 0 0 2.5rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 4rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+    }
+
+    &-image {
+        flex-shrink: 0;
+        display: flex;
+        width: 40rem;
+        height: 40rem;
+        border-radius: 3rem;
+
+        @media #{$lg} {
+            width: 34.7rem;
+            height: 24.8rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: inherit;
+        }
+    }
+
+    &-text {
+        color: var(--color-text-secondary);
+        padding-top: 2.2rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            padding-top: 0;
+        }
+
+        &, p, li, b, span {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+
+            @media #{$lg} {
+                line-height: 1.8rem;
+            }
+        }
+
+        span {
+            color: $color-active;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        .highlight {
+            font-weight: 500;
+            color: $color-active-secondary;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 0.5rem;
+        }
+    }
+
+    .bg-light {
+        right: -2.2rem;
+        bottom: -45rem;
+    }
+}

@@ -1,0 +1,33 @@
+.shops-similar {
+    margin-bottom: 8rem;
+
+    @media #{$lg} {
+        margin-bottom: 6rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 6.5rem;
+
+        @media #{$lg} {
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .shops-card {
+            width: calc(25% - 1.5rem);
+
+            @media #{$lg} {
+                width: calc(50% - 0.5rem);
+            }
+        }
+    }
+
+    .btn-back {
+        @media #{$md} {
+            width: 100%;
+        }
+    }
+}

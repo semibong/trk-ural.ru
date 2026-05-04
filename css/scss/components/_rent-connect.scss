@@ -4,6 +4,12 @@ body {
             background: #F0F5F9;
         }
     }
+
+    &.index-page .rent-connect {
+        .bg-light {
+            bottom: -18.7rem;
+        }
+    }
 }
 
 .rent-connect {
@@ -92,6 +98,6 @@ body {
 
     .bg-light {
         left: -24.4rem;
-        bottom: -18.7rem;
+        bottom: -34rem;
     }
 }

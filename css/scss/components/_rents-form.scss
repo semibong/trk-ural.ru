@@ -1,0 +1,113 @@
+body {
+    &:not(.light), &.dark {
+        .rents-form {
+            --color-rentsform-bg: rgba(14, 21, 37, 0.6);
+        }
+    }
+
+    &.light {
+        .rents-form {
+            --color-rentsform-bg: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+
+.rents-form {
+    position: relative;
+    margin-bottom: 6rem;
+
+    .form {
+        background-color: var(--color-rentsform-bg);
+        box-sizing: border-box;
+        padding: 4.5rem 5rem 6rem;
+        border: var(--color-block-border) 1px solid;
+        border-radius: 3.2rem;
+        transition: all .2s linear;
+
+        @media #{$lg} {
+            padding: 2.8rem 2rem 4.8rem;
+        }
+
+        &-input {
+            width: calc(25% - 3.75rem);
+
+            @media #{$lg} {
+                max-width: none;
+                width: calc(50% - 1rem);
+            }
+
+            @media #{$md} {
+                width: 100%;
+            }
+        }
+
+        &-textarea {
+            @media #{$lg} {
+                max-width: none;
+                order: 1;
+            }
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem 5rem;
+        margin-bottom: 4.2rem;
+
+        @media #{$lg} {
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media #{$md} {
+            gap: 1rem;
+        }
+    }
+
+    &__control {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        @media #{$lg} {
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 3rem;
+        }
+
+        .btn {
+            width: 25.2rem;
+
+            @media #{$lg} {
+                width: calc(50% - 1rem);
+            }
+
+            @media #{$md} {
+                width: 100%;
+            }
+        }
+
+        .form-warning {
+            position: absolute;
+            transform: translateY(-100%);
+            top: -5rem;
+            left: 60.4rem;
+
+            @media #{$lg} {
+                position: relative;
+                width: 100%;
+                transform: translateX(-0.5rem);
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+
+    .bg-light {
+        top: 13.8rem;
+        right: -16.2rem;
+    }
+}

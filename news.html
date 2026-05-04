@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/svg/favicon.svg" type="image/x-icon">
+    <title>ТРК Урал</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="js/fancybox/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark">
+    <header class="header">
+        <div class="container header__content">
+            <button class="header__burger-btn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="header-logo">
+                <img src="images/svg/logo.svg" alt="" class="dark-element">
+                <img src="images/svg/logo-light.svg" alt="" class="light-element">
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="maps.html">Карта комплекса</a></li>
+                    <li><a href="about.html">О комплексе</a></li>
+                    <li><a href="javascript:void(0)">Кино</a></li>
+                    <li><a href="news.html" class="active">Новости</a></li>
+                    <li><a href="rents.html">Арендаторам</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__buttons">
+                <button class="theme-change">
+                    <img src="images/svg/theme-change.svg" alt="" class="dark-element">
+                    <img src="images/svg/theme-change-light.svg" alt="" class="light-element">
+                </button>
+                <a href="tel:+73512142400" class="phone">
+                    <img src="images/svg/phone.svg" alt="">
+                    <span>+7 (351) 214-24-00</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="burger">
+        <div class="container burger__wrapper">
+            <div class="burger__content">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="maps.html">Карта комплекса</a></li>
+                        <li><a href="about.html">О комплексе</a></li>
+                        <li><a href="javascript:void(0)">Кино</a></li>
+                        <li><a href="news.html" class="active">Новости</a></li>
+                        <li><a href="rents.html">Арендаторам</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+73512142400" class="phone">
+                    <img src="images/svg/phone.svg" alt="">
+                    <span>+7 (351) 214-24-00</span>
+                </a>
+                <div class="socials">
+                    <a href="javascript:void(0)" class="socials__item">
+                        <img src="images/svg/max-icon.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="socials__item">
+                        <img src="images/svg/vk-icon.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="socials__item">
+                        <img src="images/svg/tg-icon.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="socials__item">
+                        <img src="images/svg/rutube-icon.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="socials__item">
+                        <img src="images/svg/dzen-icon.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <div class="breadcrumb__content">
+                    <div class="breadcrumb__item">
+                        <a href="index.html">
+                            <span>Главная</span>
+                        </a>
+                        <i>&nbsp;&gt;&nbsp;&nbsp;</i>
+                    </div>
+                    <div class="breadcrumb__item">
+                        <span>Новости</span>
+                    </div>
+                </div>
+                <div class="bg-light"></div>
+            </div>
+            <h1 class="title">Новости</h1>
+            <section class="news">
+                <div class="news-sort">
+                    <form action="/news/" class="form" id="form-news">
+                        <div class="form-select">
+                            <select name="form-news-month" id="form-news-month">
+                                <option value selected>Месяц</option>
+                                <option value="01">Январь</option>
+                                <option value="02">Февраль</option>
+                                <option value="03">Март</option>
+                                <option value="04">Апрель</option>
+                                <option value="05">Май</option>
+                                <option value="06">Июнь</option>
+                                <option value="07">Июль</option>
+                                <option value="08">Август</option>
+                                <option value="09">Сентябрь</option>
+                                <option value="10">Октябрь</option>
+                                <option value="11">Ноябрь</option>
+                                <option value="12">Декабрь</option>
+                            </select>
+                        </div>
+                        <div class="form-select">
+                            <select name="form-news-year" id="form-news-year">
+                                <option value selected>Год</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="news__content">
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-4.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Новогодние ёлки для детей со 2 по 6 января</h3>
+                            <p class="news-card-text">Веселые новогодние дни для всей семьи совершенно бесплатно</p>
+                            <span class="news-card-date">11.11.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-2.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Приглашаем всех любителей шашек на…</h3>
+                            <p class="news-card-text">Новость опубликована 25.06.2025 и отражает реальный контент раздела «Новости».</p>
+                            <span class="news-card-date">25.06.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-3.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Киноклуб КИНОЭКСПЕРТИЗА с…</h3>
+                            <p class="news-card-text">Новость опубликована 18.02.2025 в текущем новостном разделе сайта.</p>
+                            <span class="news-card-date">18.02.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-1.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Открытый показ документального филь…</h3>
+                            <p class="news-card-text">Новость опубликована 11.11.2025 на действующем сайте ТРК «Урал».</p>
+                            <span class="news-card-date">11.11.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-2.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Приглашаем всех любителей шашек на…</h3>
+                            <p class="news-card-text">Новость опубликована 25.06.2025 и отражает реальный контент раздела «Новости».</p>
+                            <span class="news-card-date">25.06.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-3.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Киноклуб КИНОЭКСПЕРТИЗА с…</h3>
+                            <p class="news-card-text">Новость опубликована 18.02.2025 в текущем новостном разделе сайта.</p>
+                            <span class="news-card-date">18.02.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-1.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Открытый показ документального филь…</h3>
+                            <p class="news-card-text">Новость опубликована 11.11.2025 на действующем сайте ТРК «Урал».</p>
+                            <span class="news-card-date">11.11.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-2.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Приглашаем всех любителей шашек на…</h3>
+                            <p class="news-card-text">Новость опубликована 25.06.2025 и отражает реальный контент раздела «Новости».</p>
+                            <span class="news-card-date">25.06.2025</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a href="new.html"></a>
+                        <div class="news-card-image">
+                            <img src="images/news-card-img-3.jpg" alt="">
+                        </div>
+                        <div class="news-card__content">
+                            <h3 class="news-card-name">Киноклуб КИНОЭКСПЕРТИЗА с…</h3>
+                            <p class="news-card-text">Новость опубликована 18.02.2025 в текущем новостном разделе сайта.</p>
+                            <span class="news-card-date">18.02.2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light"></div>
+            </section>
+            <section class="rent-connect">
+                <div class="rent-connect__content">
+                    <h2 class="title-mini">Арендаторам</h2>
+                    <div class="rent-connect__block">
+                        <p class="title">Арендаторам</p>
+                        <p class="rent-connect-text">На странице «Арендаторам» размещена заявка на аренду помещения, а также контакты по островной торговле и арендным отношениям.</p>
+                    </div>
+                    <div class="rent-connect__buttons">
+                        <a href="tel:+79048006300" class="btn btn-bold">Юлия Поспелова - +7 (904) 800 63 00</a>
+                        <a href="mailto:" class="btn btn-bold">pospelova@trk-ural.ru</a>
+                    </div>
+                </div>
+                <div class="bg-light"></div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer-top">
+                <p>10:00 - 22:00</p>
+                <a href="maps.html">Карта комплекса</a>
+                <p>454000, г. Челябинск, ул. Воровского, 6</p>
+            </div>
+            <div class="footer__content">
+                <div class="footer__links">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/svg/logo.svg" alt="">
+                    </a>
+                    <div class="socials">
+                        <a href="javascript:void(0)" class="socials__item">
+                            <img src="images/svg/max-icon.svg" alt="">
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <img src="images/svg/vk-icon.svg" alt="">
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <img src="images/svg/tg-icon.svg" alt="">
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <img src="images/svg/rutube-icon.svg" alt="">
+                        </a>
+                        <a href="javascript:void(0)" class="socials__item">
+                            <img src="images/svg/dzen-icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__menus">
+                    <nav class="menu">
+                        <p>Разделы</p>
+                        <ul>
+                            <li><a href="about.html">О комплексе</a></li>
+                            <li><a href="javascript:void(0)">Кино</a></li>
+                            <li><a href="news.html">Новости и акции</a></li>
+                            <li><a href="rents.html">Арендаторам</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="menu">
+                        <p>Категории</p>
+                        <ul>
+                            <li><a href="shops.html">Магазины</a></li>
+                            <li><a href="shops.html">Где поесть</a></li>
+                            <li><a href="shops.html">Сервисы</a></li>
+                            <li><a href="shops.html">Развлечения</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="menu">
+                        <p>Контакты</p>
+                        <ul>
+                            <li><a href="tel:+73512142400">+7 (351) 214-24-00</a></li>
+                            <li><a href="mailto:info@trk-ural.ru">info@trk-ural.ru</a></li>
+                            <li><a href="https://2gis.ru/chelyabinsk/search/%D0%A3%D0%BB.%D0%B2%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%206/firm/2111590608523434/61.394081%2C55.1573" target="_blank">454000, г. Челябинск, ул. Воровского, 6</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 ТРК Урал</p>
+                <a href="javascript:void(0)">Политика обработки ПД</a>
+            </div>
+        </div>
+    </footer>
+    <div class="up up-invisible">
+        <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="dark-element">
+            <circle cx="26" cy="26" r="26" fill="#F3F0F5" fill-opacity="0.2"/>
+            <path d="M19 26L26 19M26 19L33 26M26 19V33" stroke="#121926" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="light-element">
+            <circle cx="26" cy="26" r="26" fill="#A6A8AA" fill-opacity="0.2"/>
+            <path d="M19 26L26 19M26 19L33 26M26 19V33" stroke="#121926" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <script src="js/jquery/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery/jquery.form.min.js"></script>
+    <script src="js/jquery/jquery.inputmask.min.js"></script>
+    <script src="js/swiper/swiper-bundle.js"></script>
+    <script src="js/fancybox/fancybox.umd.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,17 +1,25 @@
 body {
     &:not(.light), &.dark {
         .btn {
-            --color-btn-more: #EAA22F;
-            --color-btn-more-border: rgba(255, 255, 255, 0.36);
+            --color-btn-all: #EAA22F;
+            --color-btn-all-border: rgba(255, 255, 255, 0.36);
             --color-btn-bold-border: rgba(255, 255, 255, 0.1);
+            --color-btn-card: #fff;
+            --color-btn-card-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.24));
+            --color-btn-card-border: rgba(255, 255, 255, 0.36);
+            --color-btn-more-bg: rgba(127, 140, 165, 0.2);
         }
     }
 
     &.light {
         .btn {
-            --color-btn-more: #121926;
-            --color-btn-more-border: rgba(17, 24, 39, 0.08);
+            --color-btn-all: #121926;
+            --color-btn-all-border: rgba(17, 24, 39, 0.08);
             --color-btn-bold-border: #E0E1E2;
+            --color-btn-card: #67748B;
+            --color-btn-card-bg: #E5E5E5;
+            --color-btn-card-border: transparent;
+            --color-btn-more-bg: #fff;
         }
     }
 }
@@ -68,14 +76,14 @@ body {
         }
     }
 
-    &-more {
-        color: var(--color-btn-more);
+    &-all {
+        color: var(--color-btn-all);
         background: linear-gradient(0deg, rgba(#fff, 0.12) 0%, rgba(#fff, 0.24) 50%, rgba(#fff, 0.24) 100%);
         background-size: 100% 200%;
         background-position: bottom;
         box-shadow: none;
         padding: 0 2.2rem;
-        border: var(--color-btn-more-border) 1px solid;
+        border: var(--color-btn-all-border) 1px solid;
         transition: background-position .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out;
 
         &:hover {
@@ -98,6 +106,93 @@ body {
 
         &:hover {
             color: $color-active;
+        }
+    }
+
+    &-back {
+        font-weight: 400;
+        color: var(--color-secondary);
+        height: 4.8rem;
+        background: transparent;
+        box-shadow: none;
+        padding: 0 2.8rem 0 5.2rem;
+        border: var(--color-secondary) 1px solid;
+        transition: all .2s linear;
+
+        &:hover {
+            color: $color-active;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1.2rem;
+            height: 1.7rem;
+            background: url(../images/svg/btn-back-icon.svg) no-repeat center / contain;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 1.6rem;
+        }
+    }
+
+    &-card {
+        font-size: 1.6rem;
+        color: var(--color-btn-card);
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        transition: color .2s linear, box-shadow .3s ease-in-out;
+
+        &:hover {
+            color: #fff;
+            box-shadow: 0 1.6rem 3.4rem 0 rgba(#D52B1E, 0.24);
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10rem;
+            box-sizing: border-box;
+            transition: all .3s ease-in-out;
+            top: 0;
+            left: 0;
+        }
+
+        &::before {
+            background: var(--color-btn-card-bg);
+            border: var(--color-btn-card-border) 1px solid;
+            z-index: -1;
+        }
+
+        &::after {
+            background: #FF5B47 linear-gradient(136deg, #FF5B47 0%, #FF7B48 68%, #FFB339 100%);
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+    &-more {
+        color: $color-active;
+        width: 100%;
+        background: var(--color-block-background);
+        backdrop-filter: blur(11px);
+        box-shadow: $block-shadow;
+        border: var(--color-block-border) 1px solid;
+        transition: all .2s linear;
+
+        &:hover {
+            color: $color-active-secondary;
+            background: var(--color-btn-more-bg);
         }
     }
 }
