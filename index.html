@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="images/svg/favicon.svg" type="image/x-icon">
     <title>ТРК Урал</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/select2/select2.min.css">
     <link rel="stylesheet" href="js/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="js/fancybox/fancybox.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,7 +23,7 @@
                 <ul>
                     <li><a href="maps.html">Карта комплекса</a></li>
                     <li><a href="about.html">О комплексе</a></li>
-                    <li><a href="javascript:void(0)">Кино</a></li>
+                    <li><a href="https://kinomax.ru/films">Кино</a></li>
                     <li><a href="news.html">Новости</a></li>
                     <li><a href="rents.html">Арендаторам</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
@@ -47,7 +48,7 @@
                     <ul>
                         <li><a href="maps.html">Карта комплекса</a></li>
                         <li><a href="about.html">О комплексе</a></li>
-                        <li><a href="javascript:void(0)">Кино</a></li>
+                        <li><a href="https://kinomax.ru/films">Кино</a></li>
                         <li><a href="news.html">Новости</a></li>
                         <li><a href="rents.html">Арендаторам</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
@@ -323,7 +324,7 @@
                     </div>
                     <div class="slider-progressbar"></div>
                 </div>
-                <a href="javascript:void(0)" class="btn btn-all">Все сеансы</a>
+                <a href="https://kinomax.ru/films" class="btn btn-all">Все сеансы</a>
                 <div class="bg-light"></div>
             </section>
             <section class="news-list">
@@ -383,9 +384,22 @@
                 <div class="index-map__content">
                     <h2 class="title">Карта комплекса</h2>
                     <div class="index-map__item">
-                        <!---->
-                        <img src="images/map.jpg" alt="">
-                        <!---->
+                        <script charset="utf-8" src="https://floors-widget.api.2gis.ru/loader.js" id="dg-floors-widget-loader"></script>
+                        <script charset="utf-8">
+                            DG.FloorsWidget.init({
+                                width: '100%',
+                                height: '100%',
+                                isSearchHidden: true,
+                                initData: {
+                                    complexId: '2111590608523434',
+                                    options: {
+                                        initialRotation: 3.17,
+                                        hideSearchPanel: true,
+                                        initialFloor: '1',
+                                    }
+                                },
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="bg-light"></div>
@@ -398,7 +412,7 @@
                         <p class="rent-connect-text">На странице «Арендаторам» размещена заявка на аренду помещения, а также контакты по островной торговле и арендным отношениям.</p>
                     </div>
                     <div class="rent-connect__buttons">
-                        <a href="tel:+79048006300" class="btn btn-bold">Юлия Поспелова - +7 (904) 800 63 00</a>
+                        <a href="tel:+79048006300" class="btn btn-bold"><span>Менеджер отдела аренды</span>Юлия Поспелова - +7 (904) 800 63 00</a>
                         <a href="mailto:" class="btn btn-bold">pospelova@trk-ural.ru</a>
                     </div>
                 </div>
@@ -441,7 +455,7 @@
                         <p>Разделы</p>
                         <ul>
                             <li><a href="about.html">О комплексе</a></li>
-                            <li><a href="javascript:void(0)">Кино</a></li>
+                            <li><a href="https://kinomax.ru/films">Кино</a></li>
                             <li><a href="news.html">Новости и акции</a></li>
                             <li><a href="rents.html">Арендаторам</a></li>
                         </ul>
@@ -461,6 +475,7 @@
                             <li><a href="tel:+73512142400">+7 (351) 214-24-00</a></li>
                             <li><a href="mailto:info@trk-ural.ru">info@trk-ural.ru</a></li>
                             <li><a href="https://2gis.ru/chelyabinsk/search/%D0%A3%D0%BB.%D0%B2%D0%BE%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%206/firm/2111590608523434/61.394081%2C55.1573" target="_blank">454000, г. Челябинск, ул. Воровского, 6</a></li>
+                            <li><a href="marketing.html">Рекламодателям</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -468,6 +483,7 @@
             <div class="footer-bottom">
                 <p class="footer-copyright">© 2026 ТРК Урал</p>
                 <a href="javascript:void(0)">Политика обработки ПД</a>
+                <a href="nmu.html">НМУ</a>
             </div>
         </div>
     </footer>
@@ -484,6 +500,7 @@
     <script src="js/jquery/jquery-3.7.1.min.js"></script>
     <script src="js/jquery/jquery.form.min.js"></script>
     <script src="js/jquery/jquery.inputmask.min.js"></script>
+    <script src="js/select2/select2.min.js"></script>
     <script src="js/swiper/swiper-bundle.js"></script>
     <script src="js/fancybox/fancybox.umd.js"></script>
     <script src="js/index.js"></script>

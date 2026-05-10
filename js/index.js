@@ -10,6 +10,15 @@ $(document).ready(function() {
             }
         }
     });
+    
+    $('.form-select select').each((_, e) => {
+        const placeholder = $(e).data('placeholder');
+        
+        $(e).select2({
+            placeholder: placeholder,
+            width: 'element'
+        });
+    });
 
     $('.theme-change').on('click', function() {
         if ($('body').hasClass('light')) {

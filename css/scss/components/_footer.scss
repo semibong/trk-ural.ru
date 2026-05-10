@@ -121,22 +121,6 @@
                 width: 100%;
                 margin-left: 0;
             }
-
-            p {
-                margin-bottom: 2.4rem;
-
-                @media #{$lg} {
-                    margin-bottom: 1rem;
-                }
-            }
-
-            ul {
-                gap: 1.8rem;
-
-                @media #{$lg} {
-                    gap: 1rem;
-                }
-            }
         }
     }
 
@@ -174,7 +158,7 @@
     &-bottom {
         display: flex;
         align-items: center;
-        gap: 7rem;
+        gap: 2rem;
         padding-top: 2.5rem;
         border-top: rgba(#fff, 0.08) 1px solid;
 
@@ -183,17 +167,19 @@
         }
 
         @media #{$sm} {
-            flex-direction: column;
+            flex-wrap: wrap;
             align-items: start;
-            gap: 0.8rem;
+            gap: 0.8rem 1.5rem;
         }
 
         p {
             font-size: 1.6rem;
             color: rgba(#fff, 0.62);
+            margin-right: 5rem;
 
             @media #{$lg} {
-                color: rgba(#fff, 0.3)
+                color: rgba(#fff, 0.3);
+                margin-right: 0;
             }
         }
 
