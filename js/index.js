@@ -1,6 +1,139 @@
 $(document).ready(function() {
     Fancybox.bind('[data-fancybox]');
 
+    if (typeof AOS !== 'undefined') {
+        const addAos = (selector, animation, options = {}) => {
+            $(selector).each(function (index) {
+                const delay = options.delayStep ? index * options.delayStep : options.delay;
+
+                $(this).attr({
+                    'data-aos': animation,
+                    'data-aos-duration': options.duration || 800,
+                    'data-aos-offset': options.offset || 90,
+                    'data-aos-once': options.once !== undefined ? options.once : true
+                });
+
+                if (delay) {
+                    $(this).attr('data-aos-delay', delay);
+                }
+
+                if (options.anchorPlacement) {
+                    $(this).attr('data-aos-anchor-placement', options.anchorPlacement);
+                }
+            });
+        };
+
+        const removeAos = (selector) => {
+            $(selector).removeAttr('data-aos data-aos-duration data-aos-offset data-aos-once data-aos-delay data-aos-anchor-placement')
+                .removeClass('aos-init aos-animate');
+        };
+
+        const removeInitialAos = () => {
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            $('[data-aos]').each(function () {
+                if ($(this).closest('.introduction').length) {
+                    return;
+                }
+
+                const rect = this.getBoundingClientRect();
+                const isVisibleOnLoad = rect.top < viewportHeight && rect.bottom > 0;
+
+                if (isVisibleOnLoad) {
+                    removeAos(this);
+                }
+            });
+        };
+
+        const cleanupAosElement = (element) => {
+            const $element = $(element);
+
+            if ($element.data('aos-cleaned')) {
+                return;
+            }
+
+            $element.data('aos-cleaned', true);
+
+            const duration = Number($element.attr('data-aos-duration')) || 800;
+            const delay = Number($element.attr('data-aos-delay')) || 0;
+
+            setTimeout(() => {
+                removeAos(element);
+            }, duration + delay + 50);
+        };
+
+        const showVisibleIntroductionAos = () => {
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            $('.introduction [data-aos]').each(function () {
+                const rect = this.getBoundingClientRect();
+                const isVisibleOnLoad = rect.top < viewportHeight && rect.bottom > 0;
+
+                if (isVisibleOnLoad) {
+                    $(this).addClass('aos-init aos-animate');
+                }
+            });
+        };
+
+        const observeAnimatedAosElements = () => {
+            if (!window.MutationObserver) {
+                return;
+            }
+
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') {
+                        return;
+                    }
+
+                    const element = mutation.target;
+
+                    if (element.matches('[data-aos].aos-animate')) {
+                        cleanupAosElement(element);
+                    }
+                });
+            });
+
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['class'],
+                subtree: true
+            });
+        };
+
+        addAos('main .title-mini', 'fade-up', { duration: 350 });
+        addAos('main .title', 'fade-up', { duration: 420 });
+
+        addAos('.introduction-stats, .introduction-quick, .shops-list', 'fade-up', { duration: 850, delayStep: 100 });
+        addAos('.introduction-stats__item, .introduction-info__item, .introduction-quick__item', 'fade-up', { duration: 700, delayStep: 80 });
+
+        addAos('.index-about-top, .index-about__block, .rent-connect__block, .about__content, .about-image, .gallery__slider, .map__item, .index-map__item, .contacts-map__item, .shop-map__item, .shops-map, .shops-sort, .shops__sidebar, .rent__content, .rents-text, .rents-subtitle, .nmu-subtitle, .rents-form .form, .new__content, .marketing__content, .table', 'fade-up', { duration: 850, delayStep: 100 });
+        addAos('.index-about__place, .index-about__schedule, .index-about__opportunity', 'zoom-in-up', { duration: 750, delayStep: 100 });
+        addAos('.index-about__place__item, .index-about__opportunity__item', 'fade-up', { duration: 600, delayStep: 60 });
+
+        addAos('.films-card, .news-card, .shops-card, .rents-list__item, .contacts__item, .marketing__item, .gallery__item, .about__file, .shop-card, .shop-text, .rent__slider, .rent-info, .rent-char, .rent-description, .form-input, .form-textarea', 'fade-up', { duration: 700, delayStep: 100 });
+        addAos('.contacts-map__item, .shop-map__item, .shops-map__item', 'zoom-in', { duration: 850 });
+        addAos('.rent-connect__buttons .btn', 'fade-up', { duration: 700, delayStep: 100 });
+
+        removeInitialAos();
+        showVisibleIntroductionAos();
+        observeAnimatedAosElements();
+
+        document.addEventListener('aos:in', (event) => {
+            cleanupAosElement(event.detail);
+        });
+
+        AOS.init({
+            easing: 'ease-out-cubic',
+            mirror: false,
+            once: true
+        });
+
+        $('.aos-animate[data-aos]').each(function () {
+            cleanupAosElement(this);
+        });
+    }
+
     $('input[type=tel]').inputmask({
         mask: '+7 (*{1}99) 999-99-99',
         placeholder: "+7 (___) ___-__-__",

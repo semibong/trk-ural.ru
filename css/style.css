@@ -2402,18 +2402,12 @@ body.light .index-map {
   width: 100%;
   height: 51.8rem;
   border-radius: 3rem;
+  overflow: hidden;
 }
 @media (max-width: 992px) {
   .index-map__item {
     height: 44.5rem;
   }
-}
-.index-map__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: inherit;
 }
 .index-map .bg-light {
   right: -17.5rem;
@@ -4785,12 +4779,6 @@ body.light .shop {
   .shop-map__item {
     height: 36rem;
   }
-}
-.shop-map__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .shops-similar {
