@@ -112,6 +112,7 @@ $(document).ready(function() {
         addAos('.index-about__place__item, .index-about__opportunity__item', 'fade-up', { duration: 600, delayStep: 60 });
 
         addAos('.films-card, .news-card, .shops-card, .rents-list__item, .contacts__item, .marketing__item, .gallery__item, .about__file, .shop-card, .shop-text, .rent__slider, .rent-info, .rent-char, .rent-description, .form-input, .form-textarea', 'fade-up', { duration: 700, delayStep: 100 });
+        addAos('.shops-letter', 'fade-up', { duration: 420, delayStep: 45 });
         addAos('.contacts-map__item, .shop-map__item, .shops-map__item', 'zoom-in', { duration: 850 });
         addAos('.rent-connect__buttons .btn', 'fade-up', { duration: 700, delayStep: 100 });
 

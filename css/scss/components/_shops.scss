@@ -8,6 +8,10 @@ body {
             --color-filter-background: rgba(6, 6, 20, 0.6);
             --color-filter-content: rgba(13, 19, 33, 0.5);
             --color-shops-nav-border: #2C3240;
+            --color-shops-letter: #68789F;
+            --color-shops-letter-hover: #fff;
+            --color-shops-letter-bg: transparent;
+            --color-shops-letter-border: rgba(255, 255, 255, 0.1);
         }
     }
 
@@ -20,6 +24,10 @@ body {
             --color-filter-background: rgba(255, 255, 255, 0.5);
             --color-filter-content: rgba(255, 255, 255, 0.2);
             --color-shops-nav-border: #E0E4E8;
+            --color-shops-letter: #8FA0BB;
+            --color-shops-letter-hover: #121926;
+            --color-shops-letter-bg: #fff;
+            --color-shops-letter-border: #E0E4E8;
         }
     }
 
@@ -214,7 +222,7 @@ body {
         height: 4.5rem;
         background-color: var(--color-shops-sort-all-bg);
         box-sizing: border-box;
-        padding: 0.4rem;
+        padding: 0.4rem 0.5rem;
         border: var(--color-shops-sidebar-border) 1px solid;
         border-radius: 10rem;
         margin-left: auto;
@@ -228,9 +236,8 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: auto;
-            height: 100%;
-            padding: 0 0.9rem;
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 10rem;
 
             &:hover {
@@ -270,14 +277,15 @@ body {
             }
 
             span {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 color: #68789F;
+                padding-bottom: 0.3rem;
                 transition: all .2s linear;
             }
         }
     }
 
-    &__list {
+    &__cards {
         display: flex;
         flex-wrap: wrap;
         gap: 3.2rem 2rem;
@@ -372,6 +380,94 @@ body {
                     font-size: 1.2rem;
                     line-height: 1.4rem;
                 }
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 2.4rem;
+        margin-bottom: 4.5rem;
+
+        @media #{$lg} {
+            gap: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        @media #{$md} {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+    }
+
+    &-letter {
+        display: flex;
+        width: 100%;
+        min-height: 5rem;
+        background-color: var(--color-shops-letter-bg);
+        box-sizing: border-box;
+        border: var(--color-shops-letter-border) 1px solid;
+        border-radius: 2.2rem;
+        transition: all .2s linear;
+
+        &:has(.shops-letter__content:hover) {
+            span {
+                color: var(--color-shops-letter-hover);
+            }
+        }
+
+        span {
+            flex-shrink: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: var(--color-shops-letter);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6.2rem;
+            height: 4.8rem;
+            padding-right: 3rem;
+            transition: all .2s linear;
+
+            @media #{$lg} {
+                font-size: 2rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 4.4rem;
+                background: linear-gradient(0deg, transparent, #3E434F, transparent);
+                transform: translateY(-50%);
+                top: 50%;
+                right: 3rem;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            width: 100%;
+            padding: 1.5rem 0;
+        }
+
+        &__item {
+            font-size: 1.6rem;
+            color: var(--color-primary);
+            width: 100%;
+
+            &:hover {
+                color: $color-active;
             }
         }
     }

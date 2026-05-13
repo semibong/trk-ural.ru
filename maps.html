@@ -96,22 +96,22 @@
                 <div class="bg-light"></div>
             </div>
             <h1 class="title">Карта комплекса</h1>
+            <script src="https://mapgl.2gis.com/api/js/v1"></script>
             <section class="map">
-                <div class="map__item">
-                    <script charset="utf-8" src="https://floors-widget.api.2gis.ru/loader.js" id="dg-floors-widget-loader"></script>
+                <div class="map__item" id="map">
+                    <script src="https://mapgl.2gis.com/api/js/v1"></script>
                     <script charset="utf-8">
-                        DG.FloorsWidget.init({
-                            width: '100%',
-                            height: '100%',
-                            isSearchHidden: true,
-                            initData: {
-                                complexId: '2111590608523434',
-                                options: {
-                                    initialRotation: 3.17,
-                                    initialFloor: '1',
-                                    
-                                }
-                            },
+                        const map = new mapgl.Map('map', {
+                            center: [61.394862, 55.157458],
+                            zoom: 19,
+                            key: '70b22214-9abf-4049-8058-741b7754fc6e',
+                            floorControl: 'right',
+                            rotation: 1.5,
+                            zoomControl: false,
+                            disableDragging: true,
+                            disableZoomOnScroll: true,
+                            disableDoubleClickZoom: true,
+                            disableRotationByUserInteraction: true
                         });
                     </script>
                 </div>
