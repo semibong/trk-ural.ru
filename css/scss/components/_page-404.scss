@@ -1,0 +1,114 @@
+.page-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 71rem;
+    background: url(../images/404-bg.png) no-repeat center / contain;
+    box-sizing: border-box;
+    transform: translateY(-5rem);
+    padding-top: 9rem;
+    margin-bottom: 9rem;
+
+    @media #{$lg} {
+        height: auto;
+        aspect-ratio: 375 / 542;
+        background: url(../images/404-bg-mob.png) no-repeat center / contain;
+        transform: none;
+        padding-top: 7rem;
+    }
+
+    @media #{$sm} {
+        padding-top: 5rem;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        text-transform: uppercase;
+        margin: 0 0 27.5rem;
+        background: linear-gradient(0deg, $color-active, #845B1B);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @media #{$lg} {
+            font-size: 2rem;
+            line-height: 3.5rem;
+            margin-bottom: 40rem;
+        }
+
+        @media #{$md} {
+            margin-bottom: 27.5rem;
+        }
+
+        @media #{$sm} {
+            margin-bottom: 18rem;
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #EFCD95;
+        margin-bottom: 4.8rem;
+
+        @media #{$lg} {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 2.8rem;
+
+        @media #{$lg} {
+            gap: 1rem;
+        }
+
+        .btn {
+            font-weight: 500;
+            color: $color-active;
+            width: 20.2rem;
+            height: 4.8rem;
+            background: rgba(#000, 0.4);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0.4rem 2rem 0 #98041F;
+            padding-bottom: 0.3rem;
+            transition: all .2s linear;
+
+            @media #{$lg} {
+                width: 16.8rem;
+            }
+
+            &:hover {
+                background: rgba(#000, 0.8);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1rem;
+                height: 1rem;
+                background: url(../images/svg/btn-404-icon.svg) no-repeat center / contain;
+                top: 50%;
+            }
+
+            &:first-of-type {
+                &::before {
+                    transform: translateY(50%);
+                    rotate: 180deg;
+                    left: 1.8rem;
+                }
+            }
+
+            &:last-of-type {
+                &::before {
+                    transform: translateY(-50%);
+                    right: 1.8rem;
+                }
+            }
+        }
+    }
+}
